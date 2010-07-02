@@ -32,7 +32,7 @@ while [ -n "$OBJ" ] ; do
 	fi
 
 	sed -i -e "s/@$OBJ@/$INPUT/g" $TEMPFILE
-	OBJ=`grep -o "@[A-Z]\+@" $TEMPFILE -m 1`
+	OBJ=`grep -o "@[A-Z]\+@" $TEMPFILE -m 1 | tr -d '\n' | sed 's/@@.*/@/'`
 done
 
 cat $TEMPFILE
