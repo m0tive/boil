@@ -7,6 +7,8 @@ if [ -n "$3" ] ; then
 	OFILE=$3
 fi
 
-[ -f $OFILE ] && sed -i "/$1=/d" $OFILE
+
+[ -f $OFILE ] && sed -i -e "/$1=/d" $OFILE
+touch $OFILE
 
 echo "$1=$2" >> $OFILE
