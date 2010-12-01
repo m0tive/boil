@@ -16,10 +16,12 @@
 #define _@NAMESPACE@_@CLASS@_hpp_
 // }}}
 
+//#include "@NAMESPACE@/Defs.h"
+
+//------------------------------------------------------------------------------
+
 namespace @NAMESPACE@
 {
-//#pragma pack(push,1)
-
 /// \brief
 class @CLASS@
 {
@@ -33,8 +35,6 @@ public:
     ~@CLASS@();
 
 };
-
-//#pragma pack(pop)
 }
 
 #endif
